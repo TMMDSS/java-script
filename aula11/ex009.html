@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX0009</title>
+    <style>
+        html {
+            background-color: rgb(39, 46, 88);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>qual o seu país</h1>
+    <input type="text" name="name" id="caixaTexto" placeholder="Escreva em minusculo">
+    <input type="button" value="Checar" onclick="checar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function checar() {
+            var pes = document.querySelector('#caixaTexto')
+            var res = document.querySelector('#res')
+            var va = (pes.value)
+
+            res.innerHTML = `seu país é ${va}`
+            if (va == 'brasil') {
+                res.innerHTML += '<p> Você é brasileiro</p>'
+            } else {
+                res.innerHTML += '<p> Você é estrangeiro</p>'
+            }
+
+
+        }
+    </script>
+</body>
+</html>
