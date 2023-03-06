@@ -6,19 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EX0009</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
         html {
-            background-color: rgb(39, 46, 88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(175, 57, 169);
             color: white;
+            text-align: center;
+        }
+
+        #area {
+            background-color: rgb(226, 220, 220);
+            width: 400px;
+            box-shadow: 5px 2px 0px 10px rgb(0, 0, 0);
+            padding: 25px;
+            border-radius: 30px;
+        }
+
+        #area h1 {
+            padding-top: none;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        .botao {
+            background-color: rgb(224, 17, 197);
+            color: white;
+            box-shadow: 2px 1px 0px 3px rgb(0, 0, 0);
+            width: 50px;
+            height: 25px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #caixaTexto {
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            border: 3px solid black;
+            margin-right: 20px;
+            padding: 5px;
+            width: 200px;
+            height: 40px;
         }
     </style>
 </head>
 <body>
-    <h1>qual o seu país</h1>
-    <input type="text" name="name" id="caixaTexto" placeholder="Escreva em minusculo">
-    <input type="button" value="Checar" onclick="checar()">
-    <div id="res">
-
-    </div>
+    <section id="area">
+        <h1>qual o seu país</h1>
+        <input type="text" name="name" id="caixaTexto" placeholder="Escreva em minusculo">
+        <input class="botao" type="button" value="Checar" onclick="checar()">
+        <div id="res">
+        </div>
+    </section>
     <script>
         function checar() {
             var pes = document.querySelector('#caixaTexto')
