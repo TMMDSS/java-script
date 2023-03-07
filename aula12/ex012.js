@@ -1,5 +1,9 @@
-var hora = 5
-console.log(`agora são exatamente ${hora} horas`)
+var horaAtual = new Date()
+var hora = horaAtual.getHours()
+var min = horaAtual.getMinutes()
+
+
+console.log(`agora são exatamente ${hora} horas e ${min} minutos.`)
 if (hora >= 7 && hora < 12) {
     console.log('agora é de manhã')
 } else if (hora == 12) {
