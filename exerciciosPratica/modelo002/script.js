@@ -9,10 +9,29 @@ function verificar() {
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
         var genero = ''
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
         if (fsex[0].checked) {
             genero = 'homem'
+            if (idade >= 0 && idade < 10) {
+                //criança
+            } else if (idade >= 10 && idade < 21 ) {
+                //jovem
+            } else if (idade > 50) {
+                //idoso
+            }
         } else if (fsex[1].checked) {
             genero = 'mulher'
+            if (fsex[1].checked) {
+                genero = 'mulher'
+                if (idade >=0 && idade < 10) {
+                    //criança
+                } else if (idade >= 10 && idade < 21) {
+                    //jovem
+                } else if (idade > 50) {
+                    //idoso
+                }
+            }
         }      
         res.style.textAlign = 'center'
         res.innerHTML = `detectamos ${genero} com ${idade} anos`
