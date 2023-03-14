@@ -38,7 +38,7 @@ function verificar() {
             } else if (idade < 50) {
                 //adulto
                 img.setAttribute('src', 'adulto-fem.jpg')
-            }else if (idade > 50){
+            } else if (idade > 50) {
                 //idoso
                 img.setAttribute('src', 'idoso-fem.jpg')
             }
